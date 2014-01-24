@@ -1,0 +1,162 @@
+# Super key
+set $mod Mod4
+# Alt key
+set $modalt Mod1
+
+floating_modifier $mod
+
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Dmenu, requires aur package dmenu-xft
+bindsym $mod+d exec --no-startup-iddmenu_run -f -i -l 10 -fn 'DejaVu Sans Mono-9'
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Split horizontal
+bindsym $mod+g split h
+
+# Split vertical
+bindsym $mod+v split v
+
+# Container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus parent container
+bindsym $mod+a focus parent
+
+# Reload config file
+bindsym $mod+Shift+c reload
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
+
+# Switch to workspace 
+bindsym $mod+1 workspace " 1 "
+bindsym $mod+2 workspace " 2 "
+bindsym $mod+3 workspace " 3 "
+bindsym $mod+4 workspace " 4 "
+bindsym $mod+5 workspace " 5 "
+bindsym $mod+6 workspace " 6 "
+bindsym $mod+7 workspace " 7 "
+bindsym $mod+8 workspace " 8 "
+bindsym $mod+9 workspace " 9 "
+bindsym $mod+0 workspace " 10 "
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace " 1 "
+bindsym $mod+Shift+2 move container to workspace " 2 "
+bindsym $mod+Shift+3 move container to workspace " 3 "
+bindsym $mod+Shift+4 move container to workspace " 4 "
+bindsym $mod+Shift+5 move container to workspace " 5 "
+bindsym $mod+Shift+6 move container to workspace " 6 "
+bindsym $mod+Shift+7 move container to workspace " 7 "
+bindsym $mod+Shift+8 move container to workspace " 8 "
+bindsym $mod+Shift+9 move container to workspace " 9 "
+bindsym $mod+Shift+0 move container to workspace " 10 "
+
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+	bindsym h resize shrink width 5 px or 5 ppt
+	bindsym j resize grow height 5 px or 5 ppt
+	bindsym k resize shrink height 5 px or 5 ppt
+	bindsym l resize grow width 5 px or 5 ppt
+
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+
+	bindsym Return mode "default"
+	bindsym KP_Enter mode "default"
+	bindsym Escape mode "default"
+}
+
+
+font pango:DejaVu Sans Mono 10
+
+set $blue   "#096BAA"
+set $white  "#FFFFFF"
+set $grey   "#777777"
+set $greyer "#444444"
+set $red    "#FF0000"
+
+bar {
+	colors {
+		# Background color
+		background #121212
+		# Separator color
+		separator  #444444
+		# Text color on i3bar
+		statusline #bbbbbb
+
+		#					 border  bg      text
+		focused_workspace   $blue   $blue   $white
+		active_workspace    $grey   $grey   $white
+		inactive_workspace  $greyer $greyer $white
+		urgent_workspace    $red    $red    $white
+	}
+
+	status_command $HOME/.scripts/conky-i3bar
+}
+
+# 						 border  bg		 text	 indicator
+client.focused          $blue   $blue   $white  $blue
+client.focused_inactive $grey   $grey   $white  $grey
+client.unfocused        $greyer $greyer $white  $greyer
+client.urgent           $red    $red    $white  $red
+
+# Border width
+new_window normal 2
+new_float normal 2
+
+# Mouse hover can't change focus
+focus_follows_mouse no
+
+# Keyboard shortcuts
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+KP_Enter exec --no-startup-id i3-sensible-terminal
+bindsym $modalt+Control+a exec "audacious"
+bindsym $modalt+Control+f exec "firefox"
+bindsym $modalt+Control+t exec "thunar"
+bindsym $modalt+Control+v exec "virtualbox"
+bindsym $modalt+Control+q exec "qtcreator"
+bindsym $modalt+Control+s exec "sudo pm-suspend"
+
+# Floating mode for windows with these titles
+for_window [title="Firefox Preferences"] floating enable
+for_window [title="Wine configuration"] floating enable
+for_window [title="qtcreator"] floating enable
+for_window [title="SDL application"] floating enable
+for_window [title="MainWindow"] floating enable
+for_window [title="Wine desktop"] floating enable
+for_window [title="MonoDevelop External Console"] floating enable
+for_window [title="i3float"] floating enable
+for_window [title="KDbg: Program output"] floating enable
+

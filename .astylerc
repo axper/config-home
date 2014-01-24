@@ -1,0 +1,8 @@
+--indent=tab=4
+--style=1tbs
+--indent-col1-comments
+--break-blocks
+--pad-oper
+--pad-header
+--unpad-paren
+--add-brackets

@@ -1,0 +1,27 @@
+[alsa]
+mixer-element=Master
+
+[gtkui]
+player_x=0
+player_y=20
+player_width=1596
+player_height=857
+column_widths=305,210,165,0,30
+column_expand=1,1,1,0,0
+playlist_columns=title artist album year length
+close_button_visible=FALSE
+infoarea_visible=FALSE
+infoarea_show_vis=FALSE
+
+[gtkui-layout]
+item_count=1
+item0_name=Search Tool
+item0_pos=0,-1,-1,200,639
+
+[audgui]
+filesel_path=/media/storage/music
+playlist_path=file:///media/storage/music
+
+[audacious]
+output_bit_depth=32
+shuffle=TRUE
