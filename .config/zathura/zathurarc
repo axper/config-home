@@ -1,2 +1,3 @@
-set recolor
 set guioptions none
+set show-h-scrollbar true
+set page-padding 0
