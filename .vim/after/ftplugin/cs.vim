@@ -1,2 +1,2 @@
-map <F5> :w<CR>:!mcs % -out:%:r.out && ./%:r.out<CR>
+nnoremap <buffer> <F5> :w<CR>:!mcs % -out:%:r.out && ./%:r.out<CR>
 

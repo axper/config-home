@@ -1,3 +1,3 @@
-map <F5> :w<CR>:!clang % -o %:r.out<CR>:!./%:r.out<CR>
-let g:ycm_global_ycm_extra_conf = '/media/storage/projects/ycm-completers/c.py'
+nnoremap <buffer> <F5> :w<CR>:!build-execute<CR>
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm-completers/c.py'
 
