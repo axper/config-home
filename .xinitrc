@@ -44,11 +44,14 @@ xset r rate 240 60
 # Disable pc speaker beep
 xset b off
 
+# Background color
+xsetroot -solid #1C1C1C
+
 # Screen powersave after 60 seconds
 #xset +dpms
 #xset dpms 0 0 60
 
-# Lock screen after 2 minutes
-#xautolock -time 2 -locker slock &
+# Lock screen after <time> minutes
+#xautolock -time 1 -locker slock &
 
 exec i3
