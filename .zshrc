@@ -91,7 +91,7 @@ case $TERM in
 		if ! [[ -z $CMD_START_DATE ]]; then
 			CMD_END_DATE=$(date +%s)
 			CMD_ELAPSED_TIME=$(($CMD_END_DATE - $CMD_START_DATE))
-			CMD_NOTIFY_THRESHOLD=20
+			CMD_NOTIFY_THRESHOLD=100
 
 			if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
 				#print -n '\a'
