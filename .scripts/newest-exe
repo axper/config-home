@@ -1,0 +1,18 @@
+#!/bin/sh
+unset latest
+
+for file in "${1:-.}"/*
+do
+	if [ -f "$file" ]
+	then
+		latest=${latest-$file}
+		find "$file" -prune -newer "$latest" | read -r dummy && latest=$file
+	fi
+done
+
+if [[ -x "$latest" ]]
+then
+	./$latest
+else
+	echo "Latest file $latest is not executable"
+fi
