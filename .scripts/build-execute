@@ -3,23 +3,26 @@
 # This script tries to build the project using Makefile, and if that fails
 # it tries to generate the Makefile with Cmake.
 # Then it finds the latest executable file and runs it
-# Remember to manually run cmake after changing CMakeLists.txt
 
-if [[ -e "Makefile" ]] || [[ -e "makefile" ]]
-then
+# Remember to manually run cmake after changing CMakeLists.txt as a new 
+# Makefile will not be automatically regenerated
+
+if [[ -e "Makefile" ]] || [[ -e "makefile" ]]; then
 	make
-	if [[ $? -ne 0 ]]
-	then
+	if [[ $? -ne 0 ]]; then
 		echo "Error when running make"
 		exit
 	fi
 else
-	if [[ -e "CMakeLists.txt" ]]
-	then
+	if [[ -e "CMakeLists.txt" ]]; then
 		cmake .
-		if [[ $? -ne 0 ]]
-		then
+		if [[ $? -ne 0 ]]; then
 			echo "Error when running cmake"
+			exit
+		fi
+		make
+		if [[ $? -ne 0 ]]; then
+			echo "Error when running make"
 			exit
 		fi
 	else
@@ -32,15 +35,13 @@ fi
 unset latest
 for file in "${1:-.}"/*
 do
-	if [ -f "$file" ]
-	then
+	if [[ -f "$file" ]]; then
 		latest=${latest-$file}
 		find "$file" -executable -prune -newer "$latest" | read -r dummy && latest=$file
 	fi
 done
 
-if [[ -x "$latest" ]]
-then
+if [[ -x "$latest" ]]; then
 	./$latest
 else
 	echo "Latest file $latest is not executable"
