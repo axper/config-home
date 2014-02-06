@@ -36,7 +36,6 @@ xterm*color15:	#EEEEEC
 !---- Mouse cursor ----
 Xcursor.size:			24
 Xcursor.theme:			Vanilla-DMZ
-!Xcursor.theme:			Simple-and-Soft
 
 !---- xterm ----
 xterm*VT100.geometry:   80x25
@@ -52,6 +51,7 @@ xterm*jumpScroll:       true
 xterm*multiScroll:      true
 xterm*toolBar:          false
 xterm*borderWidth: 		0
+xterm*backarrowKey:		false
 
 !---- xscreensaver ----
 !general dialog box (affects main hostname, username, password text)
