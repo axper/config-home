@@ -8,11 +8,9 @@ Xft.antialias:	true
 Xft.rgba:		rgb
 Xft.lcdfilter:	lcddefault
 
-! -*-dejavu sans mono-medium-r-normal-*-*-*-*-*-*-*-*-*
-!xterm*font:     xfg:DejaVu Sans Mono:size=9
-!xterm*faceName: xfg:DejaVu Sans Mono:size=9
-xterm*font:     xfg:Inconsolata:size=10:autohint=true:hintstyle=hintslight:antialias=true:lcdfilter=lcddefault
-xterm*faceName: xfg:Inconsolata:size=10:autohint=true:hintstyle=hintslight:antialias=true:lcdfilter=lcddefault
+!---- Xterm ----
+xterm*font:     xfg:DejaVu Sans Mono:pixelsize=13
+!xterm*font:     xfg:Inconsolata:pixelsize=13:autohint=true:hintstyle=hintslight:antialias=true:lcdfilter=lcddefault
 
 xterm*background: #000000
 xterm*foreground: #DDDDDD
@@ -32,6 +30,30 @@ xterm*color12:	#729FCF
 xterm*color13:	#AD7FA8
 xterm*color14:	#FCAF3E
 xterm*color15:	#EEEEEC
+
+!---- urxvt ----
+urxvt*font:     xft:DejaVu Sans Mono:pixelsize=12:antialias=false
+
+urxvt*background: #000000
+urxvt*foreground: #DDDDDD
+urxvt*color0:	#2E3436
+urxvt*color1:	#B51e1e
+urxvt*color2:	#4E9A06
+urxvt*color3:	#C4A000
+urxvt*color4:	#3465A4
+urxvt*color5:	#75507B
+urxvt*color6:	#CE5C00
+urxvt*color7:	#BABDB9
+urxvt*color8:	#555753
+urxvt*color9:	#EF2929
+urxvt*color10:	#8AE234
+urxvt*color11:	#FCE94F
+urxvt*color12:	#729FCF
+urxvt*color13:	#AD7FA8
+urxvt*color14:	#FCAF3E
+urxvt*color15:	#EEEEEC
+
+urxvt*scrollstyle: plain
 
 !---- Mouse cursor ----
 Xcursor.size:			24
