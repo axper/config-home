@@ -23,6 +23,7 @@ export MANPATH=/usr/share/man
 export WINEARCH=win32
 export DISPLAY=":0.0"  # for skype
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 export CCACHE_DIR=/media/storage/temp/ccache
 export SDL_VIDEO_FULLSCREEN_HEAD=1
 unset _JAVA_OPTIONS
@@ -44,9 +45,6 @@ xset r rate 240 60
 # Disable pc speaker beep
 xset b off
 
-# Background color
-xsetroot -solid #1C1C1C
-
 # Screen powersave after 60 seconds
 #xset +dpms
 #xset dpms 0 0 60
@@ -55,3 +53,4 @@ xsetroot -solid #1C1C1C
 #xautolock -time 1 -locker slock &
 
 exec i3
+

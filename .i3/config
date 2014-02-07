@@ -10,7 +10,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # Dmenu, requires aur package dmenu-xft
-bindsym $mod+d exec --no-startup-iddmenu_run -f -i -l 10 -fn 'DejaVu Sans Mono-9'
+bindsym $mod+d exec --no-startup-id dmenu_run -f -i -l 10 -fn 'DejaVu Sans Mono-9'
 
 # Change focus
 bindsym $mod+h focus left
@@ -160,3 +160,6 @@ for_window [title="MonoDevelop External Console"] floating enable
 for_window [title="i3float"] floating enable
 for_window [title="KDbg: Program output"] floating enable
 
+# Startup commands
+exec "~/.scripts/monitor"
+exec "sleep 1 && feh --bg-fill ~/00.jpg"

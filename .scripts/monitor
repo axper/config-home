@@ -8,3 +8,4 @@ if (xrandr | grep "$EXT disconnected"); then
 else
     xrandr --output $IN --auto --primary --output $EXT --auto --above $IN
 fi
+
