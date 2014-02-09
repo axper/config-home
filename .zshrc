@@ -29,6 +29,7 @@ alias pacqm='pacman -Qm'
 alias pacqo='pacman -Qo'
 alias pacqi='pacman -Qi'
 alias pacqs='pacman -Qs'
+alias pacsi='pacman -Si'
 # ls
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l --group-directories-first'
@@ -46,7 +47,8 @@ alias sv='sudo -E gvim '
 alias sudo='sudo '
 alias cal='cal -m'
 alias updatedb='sudo updatedb'
-alias d='xterm -e "cd $PWD; zsh" &'
+#alias d='xterm -e "cd $PWD; zsh" &'
+alias d='urxvt &'
 alias y='yaourt'
 alias k='kill -SIGTERM'
 alias kk='kill -SIGKILL'
@@ -112,6 +114,30 @@ case $TERM in
 esac
 
 
+###### Extract any archive ######
+extract()      # Handy Extract Program
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf "$1"    ;;
+            *.tar.gz)    tar xvzf "$1"    ;;
+            *.bz2)       bunzip2 "$1"     ;;
+            *.rar)       unrar x "$1"     ;;
+            *.gz)        gunzip "$1"      ;;
+            *.tar)       tar xvf "$1"     ;;
+            *.tbz2)      tar xvjf "$1"    ;;
+            *.tgz)       tar xvzf "$1"    ;;
+            *.zip)       unzip "$1"       ;;
+            *.Z)         uncompress "$1"  ;;
+            *.7z)        7z x "$1"        ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+
 ###### Disown jobs that end with & ######
 precmd_disown() {
   emulate -L zsh
@@ -140,4 +166,3 @@ env TERM=linux setterm -regtabs 4
 #export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 #export LESS='-R '
 
-bindkey "^?" backward-delete-char # backspace deletes chars in vi mode
