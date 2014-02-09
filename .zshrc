@@ -62,6 +62,7 @@ alias sc='sudo systemctl'
 alias skype='xhost +local: && sudo -u skype /usr/bin/skype'
 alias gdb='gdb -quiet' # disable startup message
 alias u='udiskie-umount'
+alias wvdial='sudo eject /dev/sr1 && sleep 1 && sudo wvdial'
 
 
 ###### Colored man pages ######
