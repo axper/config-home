@@ -31,7 +31,7 @@ endif
 
 " General colors
 hi Cursor 		guifg=NONE    guibg=#FFFFFF guifg=#000000 ctermbg=239 gui=none
-hi Normal 		guifg=#f2f1f0 ctermfg=7 guibg=#202020 ctermbg=232 gui=none
+hi Normal 		guifg=#f2f1f0 ctermfg=7 guibg=#000000 ctermbg=232 gui=none
 hi NonText 		guifg=#3c3c3c ctermfg=237 gui=none
 hi LineNr 		guifg=#4c4c4c ctermfg=239 gui=none
 hi StatusLine 	guifg=#d3d3d5 ctermfg=188 guibg=#3c3c3c ctermbg=237
