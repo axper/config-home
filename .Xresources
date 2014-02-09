@@ -7,6 +7,7 @@ Xft.hinting:	true
 Xft.antialias:	true
 Xft.rgba:		rgb
 Xft.lcdfilter:	lcddefault
+Xft.pixelsize:  11
 
 !---- Xterm ----
 xterm*font:     xfg:DejaVu Sans Mono:pixelsize=13
@@ -32,7 +33,9 @@ xterm*color14:	#FCAF3E
 xterm*color15:	#EEEEEC
 
 !---- urxvt ----
-urxvt*font:     xft:DejaVu Sans Mono:pixelsize=12:antialias=false
+urxvt*font:     xft:DejaVu Sans Mono:pixelsize=12:antialias=true
+!urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
+urxvt.letterSpace: -1
 
 urxvt*background: #000000
 urxvt*foreground: #DDDDDD
