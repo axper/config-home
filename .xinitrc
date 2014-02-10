@@ -50,7 +50,7 @@ xset b off
 #xset dpms 0 0 60
 
 # Lock screen after <time> minutes
-#xautolock -time 1 -locker slock &
+xautolock -time 1 -locker slock &
 
 exec i3
 
