@@ -157,13 +157,9 @@ add-zsh-hook precmd precmd_disown
 
 ###### Command not found ######
 source /usr/share/doc/pkgfile/command-not-found.zsh
+[ -r /etc/profile.d/cnf.sh ] && . /etc/profile.d/cnf.sh
 
 
 ###### Xterm tab width ######
 env TERM=linux setterm -regtabs 4
-
-
-###### Less color (requires source-highlight) ######
-#export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
-#export LESS='-R '
 
