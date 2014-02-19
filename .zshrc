@@ -90,20 +90,21 @@ case $TERM in
   termite|*xterm*|rxvt|rxvt-unicode|rxvt-256color|rxvt-unicode-256color|(dt|k|E)term)
     precmd () {
     	print -Pn "\e]0;[%~]\a"
-		# Notify
-		if ! [[ -z $CMD_START_DATE ]]; then
-			CMD_END_DATE=$(date +%s)
-			CMD_ELAPSED_TIME=$(($CMD_END_DATE - $CMD_START_DATE))
-			CMD_NOTIFY_THRESHOLD=100
-
-			if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
-				#print -n '\a'
-				#notify-send 'Job finished' "The job \"$CMD_NAME\" has finished."
-				#if [[ $CMD_NAME -ne "ra" ]]; then
-					espeak "completed command ${CMD_NAME}" 2>/dev/null &>/dev/null
-				#fi
-			fi
-		fi
+#		# Notify
+#		if ! [[ -z $CMD_START_DATE ]]; then
+#			CMD_END_DATE=$(date +%s)
+#			CMD_ELAPSED_TIME=$(($CMD_END_DATE - $CMD_START_DATE))
+#			CMD_NOTIFY_THRESHOLD=100
+#
+#			if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
+#				#print -n '\a'
+#				#notify-send 'Job finished' "The job \"$CMD_NAME\" has finished."
+#				#if [[ $CMD_NAME -ne "ra" ]]; then
+#					#espeak "completed command ${CMD_NAME}" 2>/dev/null &>/dev/null
+#					espeak "completed command ${CMD_NAME}" 2>/dev/null
+#				#fi
+#			fi
+#		fi
     }
     preexec () {
 		print -Pn "\e]0;[%~] ($1)\a"
