@@ -161,5 +161,6 @@ for_window [title="i3float"] floating enable
 for_window [title="KDbg: Program output"] floating enable
 
 # Startup commands
-exec "~/.scripts/monitor"
-exec "sleep 1 && feh --bg-fill ~/00.jpg"
+exec --no-startup-id "~/.scripts/monitor"
+exec --no-startup-id "sleep 1 && feh --bg-fill ~/00.jpg"
+
