@@ -101,11 +101,15 @@ mode "resize" {
 
 font pango:DejaVu Sans Mono 10
 
-set $blue   "#096BAA"
 set $white  "#FFFFFF"
+set $blue   "#096BAA"
+set $blue2  "#3d88b7"
 set $grey   "#777777"
-set $greyer "#444444"
+set $grey2  "#444444"
+set $grey3  "#606060"
 set $red    "#FF0000"
+set $green  "#01DF01"
+set $orange "#C47451"
 
 bar {
 	colors {
@@ -119,7 +123,7 @@ bar {
 		#					 border  bg      text
 		focused_workspace   $blue   $blue   $white
 		active_workspace    $grey   $grey   $white
-		inactive_workspace  $greyer $greyer $white
+		inactive_workspace  $grey2  $grey2  $white
 		urgent_workspace    $red    $red    $white
 	}
 
@@ -127,9 +131,9 @@ bar {
 }
 
 # 						 border  bg		 text	 indicator
-client.focused          $blue   $blue   $white  $blue
+client.focused          $blue2  $blue   $white  $blue
 client.focused_inactive $grey   $grey   $white  $grey
-client.unfocused        $greyer $greyer $white  $greyer
+client.unfocused        $grey3  $grey2  $white  $grey2
 client.urgent           $red    $red    $white  $red
 
 # Border width
