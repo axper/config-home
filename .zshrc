@@ -41,6 +41,7 @@ alias v='gvim'
 alias p='ps -ux'
 # Write command history, as typing 'S' in ranger erases it
 alias ra='fc -W && ranger'
+alias a='fc -W && ranger'
 alias pwgen='pwgen -yc'
 alias s='sudo '
 alias sv='sudo -E gvim '
@@ -64,7 +65,11 @@ alias gdb='gdb -quiet' # disable startup message
 alias u='udiskie-umount'
 alias wvdial='sudo eject /dev/sr1 && sleep 1 && sudo wvdial'
 alias g='surfraw google'
-alias discover='namp -sP'
+# Don't forget the prefix, usually /24
+alias discover='nmap -sP'
+alias tra='trs {=hy}'
+alias trr='trs {=ru}'
+alias tre='trs {=en}'
 
 
 ###### Colored man pages ######
