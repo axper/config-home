@@ -70,6 +70,8 @@ alias discover='nmap -sP'
 alias tra='trs {=hy}'
 alias trr='trs {=ru}'
 alias tre='trs {=en}'
+alias ru="setxkbmap -layout us,am,ru -variant ,phonetic-alt,phonetic -option 'grp:alt_space_toggle,caps:escape'"
+alias noru="setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_space_toggle,caps:escape'"
 
 
 ###### Colored man pages ######
