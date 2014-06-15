@@ -11,6 +11,7 @@ Xft.pixelsize:  11
 Xft*dpi:        96
 
 !---- Xterm ----
+xterm*faceName:     DejaVu Sans Mono:size=9
 xterm*font:     xfg:DejaVu Sans Mono:pixelsize=13
 !xterm*font:     xfg:Inconsolata:pixelsize=13:autohint=true:hintstyle=hintslight:antialias=true:lcdfilter=lcddefault
 
@@ -37,7 +38,7 @@ xterm*color15:	#EEEEEC
 urxvt*font:     xft:DejaVu Sans Mono:pixelsize=12:antialias=true
 !urxvt8font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 urxvt*letterSpace: -1
-urxvt*transparent:   true
+urxvt*transparent:   false
 urxvt*shading:       18
 
 urxvt*background: #000000
@@ -79,8 +80,8 @@ xterm*rightScrollBar:   true
 xterm*jumpScroll:       true
 xterm*multiScroll:      true
 xterm*toolBar:          false
-xterm*borderWidth: 		0
-xterm*backarrowKey:		false
+xterm*borderWidth:             0
+xterm*backarrowKey:            false
 
 !---- xscreensaver ----
 !general dialog box (affects main hostname, username, password text)
