@@ -1,4 +1,4 @@
 set guioptions none
 set show-v-scrollbar true
 set show-h-scrollbar false
-set page-padding 0
+set page-padding 1
