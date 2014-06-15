@@ -40,8 +40,8 @@ alias grep='grep --color=auto'
 alias v='gvim'
 alias p='ps -ux'
 # Write command history, as typing 'S' in ranger erases it
-alias ra='fc -W && ranger'
-alias a='fc -W && ranger'
+#alias ra='fc -W && ranger'
+#alias a='fc -W && ranger'
 alias pwgen='pwgen -yc'
 alias s='sudo '
 alias sv='sudo -E gvim '
@@ -72,6 +72,7 @@ alias trr='trs {=ru}'
 alias tre='trs {=en}'
 alias ru="setxkbmap -layout us,am,ru -variant ,phonetic-alt,phonetic -option 'grp:alt_space_toggle,caps:escape'"
 alias noru="setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_space_toggle,caps:escape'"
+alias eclimd="/usr/share/eclipse/eclimd"
 
 
 ###### Colored man pages ######
@@ -172,4 +173,16 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 
 ###### Xterm tab width ######
 env TERM=linux setterm -regtabs 4
+
+
+###### Ranger: check if already running ######
+# Call only this function if you want to open ranger
+ra() {
+	if [ -z "$RANGER_LEVEL" ]
+	then
+		ranger
+	else
+		exit
+	fi
+}
 
