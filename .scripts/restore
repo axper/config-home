@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo xargs pacman -S --needed --noconfirm < installed.txt

@@ -1,0 +1,22 @@
+#!/bin/sh
+BACKUP_DIR="/media/storage/backup"
+CURRENT_TIME=$(date +%F.%H.%M.%S)
+
+# git repos
+unpushed-notify -t $HOME /etc /media/storage/learn/projects
+
+# package lists
+pacman -Qqe | grep -Fvx "$(pacman -Qqm)" > "$BACKUP_DIR/installed.txt"
+pacman -Qqm > "$BACKUP_DIR/aur.txt"
+
+# firefox bookmarks
+mkdir -p "$BACKUP_DIR/firefox/$CURRENT_TIME"
+cp -R "$HOME/.mozilla/firefox" "$BACKUP_DIR/firefox/$CURRENT_TIME"
+
+# qbittorrent config
+mkdir -p "$BACKUP_DIR/qbittorrent/$CURRENT_TIME"
+cp -R "$HOME/.config/qBittorrent" "$BACKUP_DIR/qbittorrent/$CURRENT_TIME"
+
+# grive
+cd /media/storage/learn
+grive &

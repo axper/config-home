@@ -1,0 +1,18 @@
+#!/bin/sh
+
+DOMAIN_NAME=$(echo $1| awk -F/ '{print $3}')
+echo $DOMAIN_NAME
+
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --limit-rate=20K \
+     --wait=2 \
+     --domains $DOMAIN_NAME \
+     --no-parent \
+         $1
+
