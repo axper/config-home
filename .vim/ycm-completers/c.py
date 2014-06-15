@@ -16,7 +16,7 @@ flags = [
 # a "-std=<something>".
 # For a C project, you would set this to something like 'c99' instead of
 # 'c++11'.
-'-std=c99',
+'-std=c89',
 # ...and the same thing goes for the magic -x option which specifies the
 # language that the files to be compiled are written in. This is mostly
 # relevant for c++ headers.
@@ -24,27 +24,17 @@ flags = [
 '-x',
 'c',
 '-isystem',
-'../BoostParts',
+'/usr/bin/../lib64/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../include/c++/4.9.0',
 '-isystem',
-# This path will only work on OS X, but extra paths that don't exist are not
-# harmful
-'/System/Library/Frameworks/Python.framework/Headers',
+'/usr/bin/../lib64/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../include/c++/4.9.0/x86_64-unknown-linux-gnu',
 '-isystem',
-'../llvm/include',
+'/usr/bin/../lib64/gcc/x86_64-unknown-linux-gnu/4.9.0/../../../../include/c++/4.9.0/backward',
 '-isystem',
-'../llvm/tools/clang/include',
-'-I',
-'.',
-'-I',
-'./ClangCompleter',
+'/usr/local/include',
 '-isystem',
-'./tests/gmock/gtest',
+'/usr/bin/../lib/clang/3.4.1/include',
 '-isystem',
-'./tests/gmock/gtest/include',
-'-isystem',
-'./tests/gmock',
-'-isystem',
-'./tests/gmock/include'
+'/usr/include',
 ]
 
 
