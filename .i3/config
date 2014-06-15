@@ -47,6 +47,9 @@ bindsym $mod+space focus mode_toggle
 # Focus parent container
 bindsym $mod+a focus parent
 
+# Focus child container
+bindsym $mod+z focus child
+
 # Reload config file
 bindsym $mod+Shift+c reload
 
@@ -54,7 +57,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
 
 # Switch to workspace 
 bindsym $mod+1 workspace " 1 "
@@ -98,6 +101,7 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 
+hide_edge_borders both
 
 font pango:DejaVu Sans Mono 10
 
@@ -163,8 +167,11 @@ for_window [title="Wine desktop"] floating enable
 for_window [title="MonoDevelop External Console"] floating enable
 for_window [title="i3float"] floating enable
 for_window [title="KDbg: Program output"] floating enable
+for_window [title="Form1"] floating enable
+for_window [title="recordMyDesktop"] floating enable
+for_window [title="Keyboard Status Monitor"] floating enable
+for_window [title="Current Media Information"] floating enable
 
 # Startup commands
 exec --no-startup-id "~/.scripts/monitor"
-exec --no-startup-id "sleep 1 && feh --bg-fill ~/00.jpg"
 
