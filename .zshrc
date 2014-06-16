@@ -91,7 +91,7 @@ man() {
 
 ###### Prompt style ######
 autoload -U colors && colors
-PROMPT="%{$fg_bold[green]%}%~ $ %{$reset_color%}"
+PROMPT="%{$fg_bold[blue]%}%~  %{$reset_color%}"
 
 
 ###### Terminal title ######
@@ -99,7 +99,7 @@ PROMPT="%{$fg_bold[green]%}%~ $ %{$reset_color%}"
 case $TERM in
   termite|*xterm*|rxvt|rxvt-unicode|rxvt-256color|rxvt-unicode-256color|(dt|k|E)term)
     precmd () {
-    	print -Pn "\e]0;[%~]\a"
+    	print -Pn "\e]0;%~\a"
 #		# Notify
 #		if ! [[ -z $CMD_START_DATE ]]; then
 #			CMD_END_DATE=$(date +%s)
@@ -117,7 +117,7 @@ case $TERM in
 #		fi
     }
     preexec () {
-		print -Pn "\e]0;[%~] ($1)\a"
+		print -Pn "\e]0;%~ ($1)\a"
 		# Notify
 		CMD_START_DATE=$(date +%s)
 		CMD_NAME=$1
