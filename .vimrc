@@ -127,8 +127,8 @@ let g:ycm_always_populate_location_list = 1
 "let g:ycm_min_num_of_chars_for_completion = 1
 
 " Debug
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
+"let g:ycm_server_use_vim_stdout = 1
+"let g:ycm_server_log_level = 'debug'
 
 " Do not show preview window
 set completeopt-=preview
