@@ -31,12 +31,12 @@ alias pacqi='pacman -Qi'
 alias pacqs='pacman -Qs'
 alias pacsi='pacman -Si'
 # ls
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls --color=always --group-directories-first'
 alias ll='ls -l --group-directories-first'
 alias la='ls -A --group-directories-first'
 alias l='ls -lAh --group-directories-first'
 # other
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 alias v='gvim'
 alias p='ps -ux'
 # Write command history, as typing 'S' in ranger erases it
