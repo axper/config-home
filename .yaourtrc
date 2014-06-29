@@ -24,7 +24,7 @@ EDITOR="gvim --nofork"
 
 # AUR
 #AURURL="https://aur.archlinux.org"
-AURCOMMENT=3
+AURCOMMENT=5
 #AURDEVELONLY=0
 #AURSEARCH=1
 AURUPGRADE=1
@@ -33,21 +33,21 @@ AURUPGRADE=1
 # Build
 EXPORT=1           # Export to 1: EXPORTDIR or PKGDEST
                     # 2: pacman cache (as root)
-EXPORTSRC=1        # Need EXPORT>0 to be used
+#EXPORTSRC=1        # Need EXPORT>0 to be used
 EXPORTDIR=""       # If empty, use makepkg's connfiguration (see makepkg.conf)
 
 # Prompt
-#NOCONFIRM=0
+NOCONFIRM=1
 #UP_NOCONFIRM=0     # No prompt while build upgrades (including -Sbu)
-#BUILD_NOCONFIRM=0  # Only prompt for editing files
-#PU_NOCONFIRM=0     # Add --noconfirm to $PACMAN -U
-#EDITFILES=1
+BUILD_NOCONFIRM=1  # Only prompt for editing files
+#PU_NOCONFIRM=1     # Add --noconfirm to $PACMAN -U
+EDITFILES=0
 #NOENTER=1
 
 # Output
 #USECOLOR=1
 #USEPAGER=0
-#DETAILUPGRADE=1
+DETAILUPGRADE=4
 #SHOWORPHANS=1
 #TERMINALTITLE=1
 
