@@ -10,7 +10,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 # Dmenu, requires aur package dmenu-xft
-bindsym $mod+d exec --no-startup-id dmenu_run -f -i -l 10 -fn 'DejaVu Sans Mono-9'
+bindsym $mod+d exec --no-startup-id dmenu_run -nb '#000000' -nf '#DDDDDD' -sb '#318D00' -sf '#FFFFFF' -p '>>>' -f -i -fn '-*-dejavu sans mono-medium-r-normal--*-100-100-*-m-0-*-*'
 
 # Change focus
 bindsym $mod+h focus left
@@ -103,7 +103,7 @@ mode "resize" {
 
 hide_edge_borders both
 
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 8
 
 set $white  "#FFFFFF"
 set $blue   "#096BAA"
@@ -116,6 +116,12 @@ set $green  "#01DF01"
 set $orange "#C47451"
 
 bar {
+	mode hide
+
+	hidden_state hide
+
+	modifier $mod
+
 	colors {
 		# Background color
 		background #121212
@@ -131,7 +137,8 @@ bar {
 		urgent_workspace    $red    $red    $white
 	}
 
-	status_command $HOME/.scripts/conky-i3bar
+	#status_command $HOME/.scripts/conky-i3bar
+	status_command i3status
 }
 
 # 						 border  bg		 text	 indicator
@@ -141,7 +148,7 @@ client.unfocused        $grey3  $grey2  $white  $grey2
 client.urgent           $red    $red    $white  $red
 
 # Border width
-new_window normal 2
+new_window pixel
 new_float normal 2
 
 # Mouse hover can't change focus
@@ -151,7 +158,8 @@ focus_follows_mouse no
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+KP_Enter exec --no-startup-id i3-sensible-terminal
 bindsym $modalt+Control+a exec "audacious"
-bindsym $modalt+Control+f exec "firefox"
+bindsym $modalt+Control+f exec "luakit"
+bindsym $modalt+Control+l exec "luakit"
 bindsym $modalt+Control+t exec "thunar"
 bindsym $modalt+Control+v exec "virtualbox"
 bindsym $modalt+Control+q exec "qtcreator"
