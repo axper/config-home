@@ -60,8 +60,9 @@ urxvt*color13:	#AD7FA8
 urxvt*color14:	#FCAF3E
 urxvt*color15:	#EEEEEC
 
-urxvt*scrollstyle: plain
+urxvt*scrollstyle: 0
 urxvt*saveLines: 50000
+urxvt*scrollBar: false
 
 !---- Mouse cursor ----
 Xcursor.size:			24
@@ -76,7 +77,7 @@ xterm*saveLines:        10000
 xterm*scrollKey:        true
 xterm*scrollTtyOutput:  false
 xterm*scrollBar:        false
-xterm*rightScrollBar:   true
+xterm*rightScrollBar:   false
 xterm*jumpScroll:       true
 xterm*multiScroll:      true
 xterm*toolBar:          false
