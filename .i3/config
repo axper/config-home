@@ -101,8 +101,6 @@ mode "resize" {
 	bindsym Escape mode "default"
 }
 
-hide_edge_borders both
-
 font pango:DejaVu Sans Mono 8
 
 set $white  "#FFFFFF"
@@ -147,8 +145,9 @@ client.focused_inactive $grey   $grey   $white  $grey
 client.unfocused        $grey3  $grey2  $white  $grey2
 client.urgent           $red    $red    $white  $red
 
-# Border width
-new_window pixel
+# Borders
+hide_edge_borders both
+new_window pixel 3
 new_float normal 2
 
 # Mouse hover can't change focus
