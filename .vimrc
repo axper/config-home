@@ -22,8 +22,8 @@ if has('mouse')
 endif
 " Highlight last search pattern
 set hlsearch
-" Set 14 lines to the cursor when moving up & down
-set so=30
+" Set number of lines to the cursor when moving up & down
+set so=14
 " Enable command visual tab-completion/suggestion
 set wildmenu
 " Wildmenu ignore compiled files
@@ -138,5 +138,6 @@ autocmd BufRead,BufNewFile PKGBUILD set filetype=PKGBUILD
 autocmd BufRead,BufNewFile *.asm set filetype=nasm
 autocmd BufRead,BufNewFile *.nasm set filetype=nasm
 
-colorscheme nicecolors
+" colorscheme nicecolors
+colorscheme up
 
