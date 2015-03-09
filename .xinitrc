@@ -18,7 +18,7 @@ udiskie --tray &
 
 # Keyboard layouts & disable caps lock
 #setxkbmap -layout us,am,ru -variant ,phonetic-alt,phonetic -option 'grp:alt_space_toggle,caps:escape' &
-setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_space_toggle,caps:escape' &
+setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_shift_toggle,caps:escape' &
 
 # keyboard delay and repeat rates
 xset r rate 240 60
@@ -41,6 +41,9 @@ numlockx &
 
 # Load styles
 xrdb ~/.Xresources
+
+# Connect to wifi
+connmanctl connect wifi_08edb94aa1ed_616363657373706f696e74_managed_psk &
 
 exec i3
 
