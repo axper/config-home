@@ -7,7 +7,7 @@ export PATH=$PATH:~/.scripts/:~/.scripts-games
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LESS=' -R '
 export LANG=en_US.utf8
-export BROWSER=luakit
+export BROWSER=firefox
 export MANPATH=/usr/share/man
 export WINEARCH=win32
 export DISPLAY=":0.0"  # for skype
@@ -18,5 +18,6 @@ export CCACHE_DIR=/media/storage/ccache
 #unset _JAVA_OPTIONS
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
+export HISTSIZE=1000000
 unset SSH_ASKPASS # Disables gui in git when asking for password
 
