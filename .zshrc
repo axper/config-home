@@ -14,13 +14,13 @@ compinit
 
 
 ###### Environtment vars ######
-# see .xinitrc
+# see .zshrc (and .xinitrc)
 
 ###### Aliases ######
 # pacman
 alias pacs='pacman -Ss'
-#alias pacu='sudo pacman -Syu'
-alias pacu='sudo pacman -Sy linux-headers && sudo pacman -Su'
+alias pacu='sudo pacman -Syu'
+#alias pacu='sudo pacman -Sy linux-headers && sudo pacman -Su'
 alias pac='sudo pacman -S'
 alias pacql='pacman -Ql'
 alias pacqs='pacman -Qs'
@@ -70,9 +70,11 @@ alias discover='nmap -sP'
 alias tra='trs {=hy}'
 alias trr='trs {=ru}'
 alias tre='trs {=en}'
-alias ru="setxkbmap -layout us,am,ru -variant ,phonetic-alt,phonetic -option 'grp:alt_space_toggle,caps:escape'"
-alias noru="setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_space_toggle,caps:escape'"
+alias ru="setxkbmap -layout us,am,ru -variant ,phonetic-alt,phonetic -option 'grp:alt_shift_toggle,caps:escape'"
+alias noru="setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_shift_toggle,caps:escape'"
 alias eclimd="/usr/share/eclipse/eclimd"
+alias m='man2archwiki'
+#alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf3\""
 
 
 ###### Colored man pages ######
