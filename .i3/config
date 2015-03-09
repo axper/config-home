@@ -114,9 +114,8 @@ set $green  "#01DF01"
 set $orange "#C47451"
 
 bar {
-	mode hide
-
-	hidden_state hide
+	#mode hide
+	#hidden_state hide
 
 	modifier $mod
 
