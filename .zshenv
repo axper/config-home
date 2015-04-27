@@ -13,7 +13,6 @@ export WINEARCH=win32
 export DISPLAY=":0.0"  # for skype
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
-export CCACHE_DIR=/media/storage/ccache
 #export SDL_VIDEO_FULLSCREEN_HEAD=1
 #unset _JAVA_OPTIONS
 export CC=/usr/bin/clang
