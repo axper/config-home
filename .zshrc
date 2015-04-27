@@ -1,3 +1,6 @@
+source /etc/profile
+
+
 ###### Zsh settings ######
 HISTFILE=~/.history
 HISTSIZE=10000
@@ -193,3 +196,6 @@ ra() {
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+source ~/.zshenv
