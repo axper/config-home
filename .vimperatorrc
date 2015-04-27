@@ -1,1 +1,2 @@
 :set hintchars=hjklasdfgyuiopqwertnmzxcvb
+:hi Hint::after -append font-size: 16pt;
