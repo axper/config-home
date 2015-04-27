@@ -23,7 +23,7 @@ endif
 " Highlight last search pattern
 set hlsearch
 " Set number of lines to the cursor when moving up & down
-set so=14
+set so=0
 " Enable command visual tab-completion/suggestion
 set wildmenu
 " Wildmenu ignore compiled files
@@ -70,7 +70,7 @@ set list lcs=tab:\ \
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 " Highlight current line
-set cursorline
+"set cursorline
 " Open new windows such as preview window at the bottom
 set splitbelow
 " Disable cursor blinking
@@ -81,6 +81,8 @@ set guioptions-=m
 set guioptions-=T
 " Font
 set guifont=DejaVu\ Sans\ Mono\ 9
+" Use system clipboard
+set clipboard=unnamedplus
 
 " Enable syntax highlighting
 syntax enable
@@ -139,5 +141,5 @@ autocmd BufRead,BufNewFile *.asm set filetype=nasm
 autocmd BufRead,BufNewFile *.nasm set filetype=nasm
 
 " colorscheme nicecolors
-colorscheme up
+colorscheme desert
 
