@@ -1,0 +1,4 @@
+#!/bin/sh
+export WINEPREFIX=~/tmp/wine-plsql
+cd "$HOME/tmp/wine-plsql/drive_c/Program Files/PLSQL Developer"
+wine plsqldev.exe
