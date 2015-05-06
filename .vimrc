@@ -83,6 +83,8 @@ set guioptions-=T
 set guifont=DejaVu\ Sans\ Mono\ 9
 " Use system clipboard
 set clipboard=unnamedplus
+" Case insensitive search
+set smartcase
 
 " Enable syntax highlighting
 syntax enable
