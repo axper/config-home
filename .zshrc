@@ -63,7 +63,7 @@ alias rsync='rsync -h --progress'
 alias c='systemctl'
 alias sc='sudo systemctl'
 # Skype - also see .scripts
-alias skype='xhost +local: && sudo -u skype /usr/bin/skype'
+#alias skype='xhost +local: && sudo -u skype /usr/bin/skype'
 alias gdb='gdb -quiet' # disable startup message
 alias u='udiskie-umount'
 alias wvdial='sudo eject /dev/sr1 && sleep 1 && sudo wvdial'
