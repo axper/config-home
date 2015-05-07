@@ -45,5 +45,8 @@ xrdb ~/.Xresources
 # Connect to wifi
 #connmanctl connect wifi_08edb94aa1ed_616363657373706f696e74_managed_psk &
 
+# Clipboard sync
+parcellite &
+
 exec i3
 
