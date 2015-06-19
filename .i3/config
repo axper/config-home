@@ -179,21 +179,20 @@ for_window [title="Keyboard Status Monitor"] floating enable
 for_window [title="Current Media Information"] floating enable
 
 # Startup commands
-exec --no-startup-id "~/.screenlayout/max-resolution.sh"
+exec --no-startup-id "~/.screenlayout/max-resolution-tilted.sh"
 
 # Put workspaces on specific monitors
-workspace " 1 " output VGA-0
-workspace " 2 " output HDMI-0
-workspace " 3 " output HDMI-0
-workspace " 4 " output HDMI-0
-workspace " 5 " output HDMI-0
-workspace " 6 " output HDMI-0
-workspace " 7 " output HDMI-0
-workspace " 8 " output HDMI-0
-workspace " 9 " output HDMI-0
-workspace " 0 " output HDMI-0
+workspace " 1 " output HDMI-0
+workspace " 2 " output VGA-0
+workspace " 3 " output VGA-0
+workspace " 4 " output VGA-0
+workspace " 5 " output VGA-0
+workspace " 6 " output VGA-0
+workspace " 7 " output VGA-0
+workspace " 8 " output VGA-0
+workspace " 9 " output VGA-0
+workspace " 0 " output VGA-0
 
-exec --no-startup-id i3-msg 'workspace " 1 "; exec intellij-idea-ultimate-edition;'
+exec --no-startup-id i3-msg 'workspace " 1 "; exec ~/.scripts/start-intellij-tilted.sh;'
 exec --no-startup-id i3-msg 'workspace " 2 "; exec firefox;'
-exec --no-startup-id i3-msg 'workspace " 3 "; exec skype;'
-exec --no-startup-id i3-msg 'workspace " 3 "; exec thunderbird;'
+exec --no-startup-id i3-msg 'workspace " 3 "; exec scudcloud;'
