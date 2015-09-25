@@ -21,7 +21,7 @@ udiskie --tray &
 setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_shift_toggle,caps:escape' &
 
 # keyboard delay and repeat rates
-xset r rate 240 60
+xset r rate 220 80
 
 # Disable pc speaker beep
 xset b off
@@ -47,6 +47,9 @@ xrdb ~/.Xresources
 
 # Clipboard sync
 parcellite &
+
+# Screenshot tool
+shutter --min_at_startup &
 
 exec i3
 
