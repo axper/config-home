@@ -157,7 +157,6 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+KP_Enter exec --no-startup-id i3-sensible-terminal
 bindsym $modalt+Control+a exec "audacious"
 bindsym $modalt+Control+f exec "luakit"
-bindsym $modalt+Control+l exec "luakit"
 bindsym $modalt+Control+t exec "thunar"
 bindsym $modalt+Control+v exec "virtualbox"
 bindsym $modalt+Control+q exec "qtcreator"
@@ -179,7 +178,7 @@ for_window [title="Keyboard Status Monitor"] floating enable
 for_window [title="Current Media Information"] floating enable
 
 # Startup commands
-exec --no-startup-id "~/.screenlayout/max-resolution-tilted.sh"
+exec --no-startup-id "~/.screenlayout/max-resolution.sh"
 
 # Put workspaces on specific monitors
 workspace " 1 " output HDMI-0
@@ -193,6 +192,4 @@ workspace " 8 " output VGA-0
 workspace " 9 " output VGA-0
 workspace " 0 " output VGA-0
 
-exec --no-startup-id i3-msg 'workspace " 1 "; exec ~/.scripts/start-intellij-tilted.sh;'
 exec --no-startup-id i3-msg 'workspace " 2 "; exec firefox;'
-exec --no-startup-id i3-msg 'workspace " 3 "; exec scudcloud;'
