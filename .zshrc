@@ -78,6 +78,8 @@ alias noru="setxkbmap -layout us,am -variant ,phonetic-alt -option 'grp:alt_shif
 alias eclimd="/usr/share/eclipse/eclimd"
 alias m='man2archwiki'
 #alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf3\""
+alias nexus='jmtpfs -o allow_other /media/nexus'
+alias nexus-umount='fusermount -u /media/nexus'
 
 
 ###### Colored man pages ######
@@ -196,6 +198,11 @@ ra() {
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+###### SSH keys ######
+#envoy -t ssh-agent
+#source <(envoy -p)
 
 
 source ~/.zshenv
