@@ -1,0 +1,23 @@
+/NetBeansProjects/JavaApplication1/nbproject/private/
+*.png
+.IntelliJIdea14/
+.PyCharm40/
+.Skype/
+.Xauthority
+workspace/
+tmp/
+.*_conf/
+Desktop/
+Downloads/
+Oracle/
+.ssh/
+.bash_history
+.cache/
+.dbus/
+.gimp-*/
+.history
+.idea/
+.local/
+.m2/
+VirtualBox VMs/
+NetBeansProjects/
